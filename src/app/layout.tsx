@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Outfit } from 'next/font/google'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 import './globals.css'
 
 const inter = Inter({
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
   creator: 'Yuta Fukuhara',
   publisher: 'Yuta Fukuhara',
   metadataBase: new URL('https://yu-fu.site'),
+  verification: {
+    google: 'JQSbQx1wj9btOCmKI620pKGQbu_vRN-od4Lx7g3cFSo',
+  },
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
@@ -67,7 +71,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   )
 }
