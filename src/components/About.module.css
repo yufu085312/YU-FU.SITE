@@ -1,0 +1,83 @@
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.sectionHeader h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.sectionDescription {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.card {
+  padding: var(--spacing-xl);
+  text-align: center;
+  animation: slideUp var(--transition-base) ease-out;
+  animation-fill-mode: both;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  animation: float 3s ease-in-out infinite;
+}
+
+.bio {
+  padding: var(--spacing-xl);
+  animation: fadeIn var(--transition-slow) ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.bio p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bio {
+    padding: var(--spacing-lg);
+  }
+  
+  .bio p {
+    font-size: 1rem;
+  }
+}

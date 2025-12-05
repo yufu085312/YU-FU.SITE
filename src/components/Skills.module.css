@@ -1,0 +1,115 @@
+.skillsContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.sectionHeader h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.sectionDescription {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.categoryCard {
+  padding: var(--spacing-xl);
+  animation: slideUp var(--transition-base) ease-out;
+  animation-fill-mode: both;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.categoryIcon {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.categoryHeader h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.skillTag {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  cursor: default;
+}
+
+.skillTag:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+}
+
+.skillTag span {
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.highlight {
+  padding: var(--spacing-xl);
+  text-align: center;
+  animation: fadeIn var(--transition-slow) ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.highlight h3 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight p {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categoryCard {
+    padding: var(--spacing-lg);
+  }
+  
+  .highlight {
+    padding: var(--spacing-lg);
+  }
+}
