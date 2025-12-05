@@ -182,6 +182,8 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
     text-align: center;
+    display: flex;
+      flex-direction: column;
   }
   
   .textContent {
@@ -195,8 +197,18 @@
   .imageWrapper {
     width: 280px;
     height: 280px;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
   }
   
+                .profileImage {
+                  display: block;
+                  margin: 0 auto;
+                  width: 100% !important;
+                  height: 100% !important;
+                }
   .buttons {
     justify-content: center;
     flex-wrap: wrap;
