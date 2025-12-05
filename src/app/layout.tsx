@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Outfit } from 'next/font/google'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import GoogleAdSense from '@/components/GoogleAdSense'
 import './globals.css'
 
 const inter = Inter({
@@ -73,6 +74,7 @@ export default function RootLayout({
       </head>
       <body>
         <GoogleAnalytics />
+        <GoogleAdSense />
         {children}
       </body>
     </html>
