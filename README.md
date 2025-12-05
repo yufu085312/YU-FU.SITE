@@ -1,4 +1,4 @@
 # YU-FU.SITE
 
 プロフィールサイト
-URL : https://yu-fu-site
+URL : https://yu-fu.site
