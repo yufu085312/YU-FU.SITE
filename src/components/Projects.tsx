@@ -8,7 +8,7 @@ export default function Projects() {
       description: 'ユーザーが近くの喫煙所を簡単に見つけられる地図アプリケーション。位置情報を活用し、リアルタイムで喫煙所の場所を表示します。',
       image: '/projects/smoking-app.png',
       url: 'https://smoking.yu-fu.site',
-      tags: ['Next.js', 'TypeScript', 'Firebase', 'Google Maps API'],
+      tags: ['Next.js', 'TypeScript', 'Firebase', 'Leaflet'],
     },
     {
       title: 'ルーレットアプリ',
