@@ -16,6 +16,9 @@ export default function Footer() {
             <a href="https://smoking.yu-fu.site" target="_blank" rel="noopener noreferrer">
               喫煙所アプリ
             </a>
+            <a href="https://ai-recipe.yu-fu.site" target="_blank" rel="noopener noreferrer">
+              冷蔵庫レシピAI
+            </a>
             <a href="https://roulette.yu-fu.site" target="_blank" rel="noopener noreferrer">
               ルーレットアプリ
             </a>
