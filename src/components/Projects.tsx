@@ -11,6 +11,13 @@ export default function Projects() {
       tags: ['Next.js', 'TypeScript', 'Firebase', 'Leaflet'],
     },
     {
+      title: '冷蔵庫レシピAI',
+      description: '余った食材からAIが美味しいレシピを提案。Google Gemini APIを使用して、冷蔵庫の残り物から創造的で実用的なレシピを生成します。',
+      image: '/projects/recipe-ai.png',
+      url: 'https://ai-recipe.yu-fu.site',
+      tags: ['Vite', 'JavaScript', 'Gemini API', 'Unsplash API'],
+    },
+    {
       title: 'ルーレットアプリ',
       description: 'カスタマイズ可能なルーレットアプリケーション。イベントやゲームで使える楽しいツールです。',
       image: '/projects/roulette-app.png',
