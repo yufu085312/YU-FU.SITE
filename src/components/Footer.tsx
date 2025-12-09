@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+import Link from 'next/link'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -28,6 +29,9 @@ export default function Footer() {
             <a href="https://zenn.dev/yu_fu" target="_blank" rel="noopener noreferrer">
               Zenn
             </a>
+            <Link href="/privacy-policy">
+              プライバシーポリシー
+            </Link>
           </div>
           
           <div className={styles.copyright}>

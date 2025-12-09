@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import styles from './Header.module.css'
 
@@ -35,9 +36,9 @@ export default function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className="container">
         <div className={styles.headerContent}>
-          <div className={styles.logo} onClick={() => scrollToSection('hero')}>
+          <Link href="/" className={styles.logo}>
             <span className="gradient-text">Yuta-Fukuhara</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className={styles.nav}>

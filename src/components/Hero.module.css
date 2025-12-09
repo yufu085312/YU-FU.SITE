@@ -178,6 +178,14 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+      padding-bottom: 140px;
+      min-height: auto;
+    }
+  
+    .scrollIndicator {
+      bottom: 30px;
+    }
   .heroContent {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
