@@ -32,6 +32,9 @@ export default function Footer() {
             <Link href="/privacy-policy">
               プライバシーポリシー
             </Link>
+            <Link href="/terms">
+              利用規約
+            </Link>
           </div>
           
           <div className={styles.copyright}>
