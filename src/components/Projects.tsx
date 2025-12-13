@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './Projects.module.css'
 
 export default function Projects() {
@@ -7,21 +8,24 @@ export default function Projects() {
       title: '喫煙所表示アプリ',
       description: 'ユーザーが近くの喫煙所を簡単に見つけられる地図アプリケーション。位置情報を活用し、リアルタイムで喫煙所の場所を表示します。',
       image: '/projects/smoking-app.png',
-      url: 'https://smoking.yu-fu.site',
+      demoUrl: 'https://smoking.yu-fu.site',
+      articleUrl: '/projects/smoking-app',
       tags: ['Next.js', 'TypeScript', 'Firebase', 'Leaflet'],
     },
     {
       title: '冷蔵庫レシピAI',
       description: '余った食材からAIが美味しいレシピを提案。Google Gemini APIを使用して、冷蔵庫の残り物から創造的で実用的なレシピを生成します。',
       image: '/projects/recipe-ai.png',
-      url: 'https://ai-recipe.yu-fu.site',
+      demoUrl: 'https://ai-recipe.yu-fu.site',
+      articleUrl: '/projects/recipe-ai',
       tags: ['Vite', 'JavaScript', 'Gemini API', 'Unsplash API'],
     },
     {
       title: 'ルーレットアプリ',
       description: 'カスタマイズ可能なルーレットアプリケーション。イベントやゲームで使える楽しいツールです。',
       image: '/projects/roulette-app.png',
-      url: 'https://roulette.yu-fu.site',
+      demoUrl: 'https://roulette.yu-fu.site',
+      articleUrl: null,
       tags: ['HTML', 'CSS', 'JavaScript'],
     },
   ]
@@ -53,14 +57,24 @@ export default function Projects() {
                     className={styles.image}
                   />
                   <div className={styles.overlay}>
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-primary"
-                    >
-                      サイトを見る
-                    </a>
+                    <div className={styles.overlayButtons}>
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary"
+                      >
+                        サイトを見る
+                      </a>
+                      {project.articleUrl && (
+                        <Link
+                          href={project.articleUrl}
+                          className="btn btn-outline"
+                        >
+                          詳細を見る
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
                 
@@ -76,14 +90,23 @@ export default function Projects() {
                     ))}
                   </div>
                   
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.projectLink}
-                  >
-                    {project.url} →
-                  </a>
+                  {project.articleUrl ? (
+                    <Link
+                      href={project.articleUrl}
+                      className={styles.projectLink}
+                    >
+                      Read More →
+                    </Link>
+                  ) : (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.projectLink}
+                      >
+                        {project.demoUrl} →
+                      </a>
+                  )}
                 </div>
               </div>
             ))}
