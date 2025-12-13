@@ -1,6 +1,41 @@
+'use client'
+
+import { useState } from 'react'
 import styles from './Contact.module.css'
 
 export default function Contact() {
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setStatus('submitting')
+
+    const formData = new FormData(e.currentTarget)
+    // FormspreeのフォームIDをここに設定してください
+    const FORMSPREE_ID = 'mvgelwyr'
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        const form = e.target as HTMLFormElement
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch (err) {
+      console.error(err)
+      setStatus('error')
+    }
+  }
+
   const socialLinks = [
     {
       name: 'GitHub',
@@ -49,6 +84,63 @@ export default function Contact() {
               お仕事のご依頼やご相談、技術的な質問など、<br />
               お気軽にご連絡ください。
             </p>
+
+            {status === 'success' ? (
+              <div className={`${styles.statusMessage} ${styles.success}`}>
+                <p>お問い合わせありがとうございます。<br />メッセージが送信されました。</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.formGroup}>
+                  <label htmlFor="name" className={styles.label}>お名前</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className={styles.input}
+                    placeholder="山田 太郎"
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label htmlFor="email" className={styles.label}>メールアドレス</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className={styles.input}
+                    placeholder="example@email.com"
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label htmlFor="message" className={styles.label}>メッセージ</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    className={styles.textarea}
+                    placeholder="お問い合わせ内容を入力してください"
+                  />
+                </div>
+
+                {status === 'error' && (
+                  <div className={`${styles.statusMessage} ${styles.error}`}>
+                    送信に失敗しました。時間をおいて再度お試しください。
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  className={styles.submitButton}
+                  disabled={status === 'submitting'}
+                >
+                  {status === 'submitting' ? '送信中...' : '送信する'}
+                </button>
+              </form>
+            )}
             
             <div className={styles.socialLinks}>
               {socialLinks.map((link, index) => (
