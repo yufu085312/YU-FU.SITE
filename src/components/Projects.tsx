@@ -25,7 +25,7 @@ export default function Projects() {
       description: 'カスタマイズ可能なルーレットアプリケーション。イベントやゲームで使える楽しいツールです。',
       image: '/projects/roulette-app.png',
       demoUrl: 'https://roulette.yu-fu.site',
-      articleUrl: null,
+      articleUrl: '/projects/roulette-app',
       tags: ['HTML', 'CSS', 'JavaScript'],
     },
   ]
