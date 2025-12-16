@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   verification: {
     google: 'JQSbQx1wj9btOCmKI620pKGQbu_vRN-od4Lx7g3cFSo',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
@@ -69,9 +74,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`${inter.variable} ${outfit.variable}`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body>
         <GoogleAnalytics />
         <GoogleAdSense />
