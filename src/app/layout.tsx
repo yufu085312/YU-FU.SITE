@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   creator: 'Yuta Fukuhara',
   publisher: 'Yuta Fukuhara',
   metadataBase: new URL('https://yu-fu.site'),
+  alternates: {
+    canonical: '/',
+  },
   verification: {
     google: 'JQSbQx1wj9btOCmKI620pKGQbu_vRN-od4Lx7g3cFSo',
   },
