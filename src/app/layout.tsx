@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Yuta Fukuhara' }],
   creator: 'Yuta Fukuhara',
   publisher: 'Yuta Fukuhara',
-  metadataBase: new URL('https://yu-fu.site'),
+  metadataBase: new URL('https://portfolio.yu-fu.site'),
   alternates: {
     canonical: '/',
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://yu-fu.site',
+    url: 'https://portfolio.yu-fu.site',
     title: 'Yuta Fukuhara | フルスタックエンジニア ポートフォリオ',
     description: '2025年新卒、メガベンチャー入社予定のフルスタックエンジニアのポートフォリオサイト',
     siteName: 'Yuta Fukuhara Portfolio',

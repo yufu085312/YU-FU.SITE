@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://yu-fu.site/sitemap.xml',
+    sitemap: 'https://portfolio.yu-fu.site/sitemap.xml',
   }
 }
