@@ -5,7 +5,7 @@ export default function Blog() {
     {
       title: '個人ブログ',
       description: '技術記事や日々の学びを発信しています',
-      url: 'https://yu-fu.net',
+      url: 'https://yu-fu.site',
       icon: '📝',
     },
     {
