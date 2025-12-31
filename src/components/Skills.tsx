@@ -16,12 +16,12 @@ export default function Skills() {
     {
       category: 'Infrastructure',
       icon: '☁️',
-      skills: ['AWS', 'GCP', 'Docker'],
+      skills: ['AWS', 'GCP', 'Docker', 'Firebase', 'Cloudflare'],
     },
     {
       category: 'Mobile',
       icon: '📱',
-      skills: ['Swift', 'React Native'],
+      skills: ['Swift', 'React Native', 'Flutter'],
     },
     {
       category: 'Tools',
