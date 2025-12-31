@@ -23,7 +23,7 @@ export default function Hero() {
               Hi, I&apos;m <span className="gradient-text">Yuta-Fukuhara</span>
             </h1>
             <p className={`${styles.subtitle} animate-slide-up`}>
-              フルスタックエンジニア
+              ソフトウェアエンジニア
             </p>
             <p className={`${styles.description} animate-slide-up`}>
               2025年新卒でメガベンチャーに入社。<br />

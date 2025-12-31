@@ -17,9 +17,9 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Yuta Fukuhara | フルスタックエンジニア ポートフォリオ',
-  description: '2025年新卒、メガベンチャー入社予定のフルスタックエンジニアのポートフォリオサイト。React、Next.js、Go、AWS等の技術を使用した開発経験を紹介。',
-  keywords: ['Yuta Fukuhara', 'YU-FU', 'ポートフォリオ', 'フルスタックエンジニア', 'Next.js', 'React', 'TypeScript', 'Go', 'AWS', 'Web開発'],
+  title: 'Yuta Fukuhara | ソフトウェアエンジニア ポートフォリオ',
+  description: '2025年新卒、メガベンチャー入社予定のソフトウェアエンジニアのポートフォリオサイト。React、Next.js、Go、AWS等の技術を使用した開発経験を紹介。',
+  keywords: ['Yuta Fukuhara', 'YU-FU', 'ポートフォリオ', 'エンジニア', 'Next.js', 'React', 'TypeScript', 'Go', 'AWS', 'Web開発'],
   authors: [{ name: 'Yuta Fukuhara' }],
   creator: 'Yuta Fukuhara',
   publisher: 'Yuta Fukuhara',
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ja_JP',
     url: 'https://portfolio.yu-fu.site',
-    title: 'Yuta Fukuhara | フルスタックエンジニア ポートフォリオ',
-    description: '2025年新卒、メガベンチャー入社予定のフルスタックエンジニアのポートフォリオサイト',
+    title: 'Yuta Fukuhara | ソフトウェアエンジニア ポートフォリオ',
+    description: '2025年新卒、メガベンチャー入社予定のソフトウェアエンジニアのポートフォリオサイト',
     siteName: 'Yuta Fukuhara Portfolio',
     images: [
       {
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yuta Fukuhara | フルスタックエンジニア ポートフォリオ',
-    description: '2025年新卒、メガベンチャー入社予定のフルスタックエンジニアのポートフォリオサイト',
+    title: 'Yuta Fukuhara | ソフトウェアエンジニア ポートフォリオ',
+    description: '2025年新卒、メガベンチャー入社予定のソフトウェアエンジニアのポートフォリオサイト',
     images: ['/og-image.png'],
   },
   robots: {

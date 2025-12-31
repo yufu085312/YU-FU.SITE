@@ -10,7 +10,7 @@ export default function Footer() {
         <div className={styles.footerContent}>
           <div className={styles.brand}>
             <h3 className="gradient-text">Yuta-Fukuhara</h3>
-            <p>フルスタックエンジニア</p>
+            <p>ソフトウェアエンジニア</p>
           </div>
           
           <div className={styles.links}>
