@@ -55,8 +55,8 @@
 }
 
 .skillTag {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
@@ -64,8 +64,8 @@
 }
 
 .skillTag:hover {
-  background: rgba(99, 102, 241, 0.2);
-  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
   transform: translateY(-2px);
 }
 

@@ -20,7 +20,7 @@ export default function Hero() {
         <div className={styles.heroContent}>
           <div className={styles.textContent}>
             <h1 className={`${styles.title} animate-fade-in`}>
-              Hi, I&apos;m <span className="gradient-text">Yuta-Fukuhara</span>
+              Hi, I&apos;m <span className={`gradient-text ${styles.nameText}`}>Yuta-Fukuhara</span>
             </h1>
             <p className={`${styles.subtitle} animate-slide-up`}>
               ソフトウェアエンジニア
