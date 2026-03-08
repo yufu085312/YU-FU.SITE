@@ -16,7 +16,7 @@ export default function Skills() {
     {
       category: 'Infrastructure',
       icon: '☁️',
-      skills: ['AWS', 'GCP', 'Docker', 'Firebase', 'Cloudflare'],
+      skills: ['AWS', 'GCP', 'Docker', 'Firebase', 'Cloudflare', 'Vercel', 'fly.io'],
     },
     {
       category: 'Mobile',
@@ -26,7 +26,7 @@ export default function Skills() {
     {
       category: 'Tools',
       icon: '🛠️',
-      skills: ['VSCode', 'Cursor', 'Antigravity', 'Xcode', 'Android Studio', 'Figma', 'Postman', 'Notion', 'Slack', 'Discord'],
+      skills: ['VSCode', 'Cursor', 'Antigravity', 'Xcode', 'Android Studio', 'Figma', 'Postman', 'Notion', 'Slack', 'Discord', 'GitHub', 'Git', 'Miro', 'DBeaver'],
     },
   ]
 

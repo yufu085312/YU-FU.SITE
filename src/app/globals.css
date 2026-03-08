@@ -1,28 +1,28 @@
 :root {
   /* Color Palette */
-  --color-background: #0a0a0f;
-  --color-background-secondary: #121218;
-  --color-surface: rgba(255, 255, 255, 0.05);
-  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-background: #ffffff;
+    --color-background-secondary: #f8fafc;
+    --color-surface: rgba(0, 0, 0, 0.02);
+    --color-surface-hover: rgba(0, 0, 0, 0.04);
   
   /* Gradient Colors */
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-secondary: #8b5cf6;
-  --color-accent: #ec4899;
+  --color-primary: #3b82f6;
+    --color-primary-light: #60a5fa;
+    --color-secondary: #4b5563;
+    --color-accent: #9ca3af;
   --color-accent-secondary: #f59e0b;
   
   /* Text Colors */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #a1a1aa;
-  --color-text-muted: #71717a;
+  --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748b;
   
   /* Border & Shadow */
-  --color-border: rgba(255, 255, 255, 0.1);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+  --color-border: rgba(0, 0, 0, 0.08);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.1);
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -223,7 +223,7 @@ a:hover {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: -1;
   pointer-events: none;
 }
