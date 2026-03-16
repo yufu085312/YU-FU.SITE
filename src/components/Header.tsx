@@ -7,14 +7,30 @@ import styles from './Header.module.css'
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isHidden, setIsHidden] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const currentScrollY = window.scrollY
+      
+      // 背景色変更の判定
+      setIsScrolled(currentScrollY > 50)
+
+      // 表示・非表示の判定 (100px以上スクロールしている場合のみ)
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // 下にスクロール
+        if (!isMobileMenuOpen) setIsHidden(true)
+      } else {
+        // 上にスクロール
+        setIsHidden(false)
+      }
+      
+      setLastScrollY(currentScrollY)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [lastScrollY, isMobileMenuOpen])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -33,7 +49,7 @@ export default function Header() {
   ]
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isHidden ? styles.hidden : ''}`}>
       <div className="container">
         <div className={styles.headerContent}>
           <Link href="/" className={styles.logo}>

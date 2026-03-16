@@ -5,6 +5,14 @@ import styles from './Projects.module.css'
 export default function Projects() {
   const projects = [
     {
+      title: 'MojiCount (文字数カウント)',
+      description: '文章作成に関わるすべての方のために開発された、多機能かつシンプルな高機能文字数カウントツール。リアルタイム計測やSNS・SEO最適化機能を備えています。',
+      image: '/projects/mojicount.png',
+      demoUrl: 'https://mojicount.yu-fu.site',
+      articleUrl: '/projects/mojicount',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    },
+    {
       title: '喫煙所表示アプリ',
       description: 'ユーザーが近くの喫煙所を簡単に見つけられる地図アプリケーション。位置情報を活用し、リアルタイムで喫煙所の場所を表示します。',
       image: '/projects/smoking-app.png',
