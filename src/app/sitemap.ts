@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: 'https://portfolio.yu-fu.site/projects/mojicount',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: 'https://portfolio.yu-fu.site/projects/smoking-app',
       lastModified: new Date(),
       changeFrequency: 'monthly',
