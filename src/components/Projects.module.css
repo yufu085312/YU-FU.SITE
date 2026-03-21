@@ -1,7 +1,7 @@
 .projectsContent {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2xl);
+  gap: var(--spacing-lg);
 }
 
 .sectionHeader {
@@ -137,3 +137,15 @@
     padding: var(--spacing-lg);
   }
 }
+
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-2xl);
+}
+
+.fullPageSection {
+  padding: calc(var(--header-height) + var(--spacing-md)) 0 var(--spacing-2xl);
+  min-height: 100vh;
+}
+

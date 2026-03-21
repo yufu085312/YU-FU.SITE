@@ -2,8 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Projects.module.css'
 
-export default function Projects() {
-  const projects = [
+interface ProjectsProps {
+  isFullPage?: boolean
+}
+
+export default function Projects({ isFullPage = false }: ProjectsProps) {
+  const allProjects = [
     {
       title: 'MojiCount (文字数カウント)',
       description: '文章作成に関わるすべての方のために開発された、多機能かつシンプルな高機能文字数カウントツール。リアルタイム計測やSNS・SEO最適化機能を備えています。',
@@ -35,17 +39,19 @@ export default function Projects() {
       demoUrl: 'https://roulette.yu-fu.site',
       articleUrl: '/projects/roulette-app',
       tags: ['HTML', 'CSS', 'JavaScript'],
-    },
+    }
   ]
 
+  const projects = isFullPage ? allProjects : allProjects.slice(0, 2)
+
   return (
-    <section id="projects" className="section">
+    <section id="projects" className={isFullPage ? styles.fullPageSection : "section"}>
       <div className="container">
         <div className={styles.projectsContent}>
           <div className={styles.sectionHeader}>
-            <h2 className="gradient-text">Projects</h2>
+            <h2 className="gradient-text">{isFullPage ? 'All Projects' : 'Projects'}</h2>
             <p className={styles.sectionDescription}>
-              開発したアプリケーション
+              {isFullPage ? 'これまでに制作したすべてのプロジェクト' : '開発したアプリケーション'}
             </p>
           </div>
 
@@ -119,8 +125,18 @@ export default function Projects() {
               </div>
             ))}
           </div>
+
+          {!isFullPage && allProjects.length > 2 && (
+            <div className={styles.viewMoreContainer}>
+              <Link href="/projects" className="btn btn-primary">
+                詳細をもっと見る
+              </Link>
+            </div>
+          )}
+
         </div>
       </div>
     </section>
   )
 }
+
