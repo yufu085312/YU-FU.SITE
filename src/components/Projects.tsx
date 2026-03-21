@@ -9,6 +9,14 @@ interface ProjectsProps {
 export default function Projects({ isFullPage = false }: ProjectsProps) {
   const allProjects = [
     {
+      title: 'Kashikari',
+      description: 'スマートな割り勘、カンタンな貸し借り管理。「誰がいくら払ったか」「誰がいくら借りているか」をシンプルに管理できるウェブアプリケーションです。',
+      image: '/projects/kashikari.png',
+      demoUrl: 'https://kashikari.yu-fu.site',
+      articleUrl: '/projects/kashikari',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    },
+    {
       title: 'MojiCount (文字数カウント)',
       description: '文章作成に関わるすべての方のために開発された、多機能かつシンプルな高機能文字数カウントツール。リアルタイム計測やSNS・SEO最適化機能を備えています。',
       image: '/projects/mojicount.png',
@@ -42,7 +50,8 @@ export default function Projects({ isFullPage = false }: ProjectsProps) {
     }
   ]
 
-  const projects = isFullPage ? allProjects : allProjects.slice(0, 2)
+  const topPageProjects = ['Kashikari', 'MojiCount (文字数カウント)']
+  const projects = isFullPage ? allProjects : allProjects.filter(p => topPageProjects.includes(p.title))
 
   return (
     <section id="projects" className={isFullPage ? styles.fullPageSection : "section"}>
