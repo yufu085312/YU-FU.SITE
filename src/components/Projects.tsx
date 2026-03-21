@@ -138,7 +138,7 @@ export default function Projects({ isFullPage = false }: ProjectsProps) {
           {!isFullPage && allProjects.length > 2 && (
             <div className={styles.viewMoreContainer}>
               <Link href="/projects" className="btn btn-primary">
-                詳細をもっと見る
+                プロジェクト一覧
               </Link>
             </div>
           )}

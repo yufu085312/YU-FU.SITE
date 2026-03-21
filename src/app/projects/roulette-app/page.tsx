@@ -124,7 +124,7 @@ export default function RouletteApp() {
             </div>
 
             <div className={styles.backButtonContainer}>
-              <Link href="/#projects" className="btn btn-ghost">
+              <Link href="/projects" className="btn btn-ghost">
                 ← プロジェクト一覧に戻る
               </Link>
             </div>
